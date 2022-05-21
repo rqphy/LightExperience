@@ -1,6 +1,8 @@
 import Experience from '../Experience'
 import Environment from './Environment'
 import Example from './Example'
+import Light from './Light'
+import Helmet from './Helmet'
 
 export default class World
 {
@@ -14,11 +16,13 @@ export default class World
         this.resources.on('ready', () =>
         {
             // Setup if source
+            this.helmet = new Helmet()
         })
         
         // Setup if no source
         this.environment = new Environment()
         this.example = new Example()
+        this.light = new Light()
     }
     
     update()
