@@ -2,7 +2,7 @@
 
 The easiest way to create your new projet.
 
-## INSTAL
+## INSTALL
 ```bash
 $ npm install
 ```
