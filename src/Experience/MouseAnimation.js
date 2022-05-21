@@ -8,7 +8,6 @@ export default class MouseAnimation
         this.experience = new Experience()
         this.canvas = this.experience.canvas
         this.light = this.experience.world.light
-        console.log(this.experience)
 
         this.lightPosition = {}
         this.lightPosition.x = 0
@@ -22,7 +21,7 @@ export default class MouseAnimation
         this.mousePosition.x = 0
         this.mousePosition.y = 0
 
-        window.addEventListener('mousemove', this.getMousePosition)
+        this.canvas.addEventListener('mousemove', this.getMousePosition)
     }
 
     getMousePosition = (_event) =>
