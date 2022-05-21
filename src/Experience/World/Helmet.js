@@ -10,7 +10,6 @@ export default class Helmet
         this.resources = this.experience.resources
 
         this.resource = this.resources.items.damagedHelmet
-        console.log(this.resource)
 
         this.setModel()
     }
@@ -19,7 +18,6 @@ export default class Helmet
     {
         this.model = this.resource.scene
         this.model.scale.set(1.5, 1.5, 1.5)
-        // this.model.rotation.y = Math.PI * 0.25
         this.scene.add(this.model)
 
         this.model.traverse((child) =>
