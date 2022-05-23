@@ -14,8 +14,8 @@ export default class MouseAnimation
         this.lightPosition.y = 0
 
         this.limits = {}
-        this.limits.x = { min: -6, max: 6 }
-        this.limits.y = { min: -6, max: 6 }
+        this.limits.x = { min: -4, max: 14 }
+        this.limits.y = { min: -4, max: 8 }
 
         this.mousePosition = {}
         this.mousePosition.x = 0

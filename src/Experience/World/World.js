@@ -3,6 +3,7 @@ import Environment from './Environment'
 import Example from './Example'
 import Light from './Light'
 import Helmet from './Helmet'
+import Rocket from './Rocket'
 
 export default class World
 {
@@ -16,12 +17,13 @@ export default class World
         this.resources.on('ready', () =>
         {
             // Setup if source
-            this.helmet = new Helmet()
+            // this.helmet = new Helmet()
+            this.rocket = new Rocket()
         })
         
         // Setup if no source
         this.environment = new Environment()
-        this.example = new Example()
+        // this.example = new Example()
         this.light = new Light()
     }
     
