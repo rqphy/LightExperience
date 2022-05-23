@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ferrari F1-75
+* source:	https://sketchfab.com/3d-models/ferrari-f1-75-06454e0f23a44fcdabcc7808aee6caf9
+* author:	Sketcher (https://sketchfab.com/sketcher987654321)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ferrari F1-75" (https://sketchfab.com/3d-models/ferrari-f1-75-06454e0f23a44fcdabcc7808aee6caf9) by Sketcher (https://sketchfab.com/sketcher987654321) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

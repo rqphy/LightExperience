@@ -11,12 +11,12 @@ export default class Environment
         this.debug = this.experience.debug
 
         // Debug
-        if(this.debug.active)
-        {
-            this.debugFolder = this.debug.ui.addFolder('environment')
-        }
+        // if(this.debug.active)
+        // {
+        //     this.debugFolder = this.debug.ui.addFolder('environment')
+        // }
 
-        this.setSunlight()
+        // this.setSunlight()
     }
 
     setSunlight()

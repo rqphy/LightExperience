@@ -10,9 +10,14 @@ export default [
     //     type: 'gltfModel',
     //     path: 'models/DamagedHelmet/glTF/DamagedHelmet.gltf'
     // },
+    // {
+    //     name: 'rocket',
+    //     type: 'gltfModel',
+    //     path: 'models/Rocket/glTF/Rocket.gltf'
+    // },
     {
-        name: 'rocket',
+        name: 'f1',
         type: 'gltfModel',
-        path: 'models/Rocket/glTF/Rocket.gltf'
+        path: 'models/F1/glTF/F1.gltf'
     },
 ]

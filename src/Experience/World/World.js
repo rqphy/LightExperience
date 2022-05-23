@@ -4,6 +4,7 @@ import Example from './Example'
 import Light from './Light'
 import Helmet from './Helmet'
 import Rocket from './Rocket'
+import F1 from './F1'
 
 export default class World
 {
@@ -18,7 +19,8 @@ export default class World
         {
             // Setup if source
             // this.helmet = new Helmet()
-            this.rocket = new Rocket()
+            // this.rocket = new Rocket()
+            this.f1 = new F1()
         })
         
         // Setup if no source
