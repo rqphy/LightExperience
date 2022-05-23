@@ -12,10 +12,11 @@ export default class MouseAnimation
         this.lightPosition = {}
         this.lightPosition.x = 0
         this.lightPosition.y = 0
+        this.lightPosition.z = -5
 
         this.limits = {}
         this.limits.x = { min: -5, max: 5 }
-        this.limits.y = { min: -5, max: 5 }
+        this.limits.y = { min: 0, max: 3 }
 
         this.mousePosition = {}
         this.mousePosition.x = 0
@@ -33,23 +34,26 @@ export default class MouseAnimation
         
     }
     
-    updateLightPosition(_x, _y)
+    updateLightPosition(_x, _y, _z)
     {
         this.light.light.position.set(
             _x,
             _y,
-            this.light.light.position.z
+            _z
         )
     }
     
     update()
     {
-        this.lightPosition.x = ((this.mousePosition.x * (Math.abs(this.limits.x.max)+Math.abs(this.limits.x.min))) / window.innerWidth) - ((Math.abs(this.limits.x.max)+Math.abs(this.limits.x.min))/ 2)
-        this.lightPosition.y = ((this.mousePosition.y * (Math.abs(this.limits.y.max)+Math.abs(this.limits.y.min))) / window.innerHeight) - ((Math.abs(this.limits.y.max)+Math.abs(this.limits.y.min))/ 2)
+        this.lightPosition.x = ((this.mousePosition.x * (Math.abs(this.limits.x.max)+Math.abs(this.limits.x.min))) / window.innerWidth) - Math.abs(this.limits.x.min)
+        this.lightPosition.y = ((this.mousePosition.y * (Math.abs(this.limits.y.max)+Math.abs(this.limits.y.min))) / window.innerHeight) - Math.abs(this.limits.y.min)
         console.log(this.lightPosition.x, this.lightPosition.y)
+        this.lightPosition.x = Math.min(Math.max(this.lightPosition.x , this.limits.x.min), this.limits.x.max)
+        this.lightPosition.y = Math.min(Math.max(this.lightPosition.y , this.limits.y.min), this.limits.y.max)
         this.updateLightPosition(
             - this.lightPosition.x,
-            this.lightPosition.y
+            this.lightPosition.y,
+            this.lightPosition.z
         )
     }
 }
