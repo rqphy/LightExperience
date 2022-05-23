@@ -66,6 +66,7 @@ export default class Experience
         this.world.update()
         this.renderer.update()
         this.mouseAnimation.update()
+        this.cameraAnimation.update()
     }
 
     destroy()

@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import { TWEEN } from 'three/examples/jsm/libs/tween.module.min.js'
 import Experience from './Experience'
 
 export default class CameraAnimation
@@ -64,10 +65,24 @@ export default class CameraAnimation
         }
 
         console.log(coords)
+        this.animateCamera(coords)
+    }
+
+    animateCamera(position)
+    {
+        // console.log(this.camera)
+        new TWEEN.Tween(this.camera.instance.position)
+            .to(position, 1800)
+            .easing(TWEEN.Easing.Quadratic.InOut)
+            .start()
+            .onComplete(function ()
+            {
+                TWEEN.remove(this)
+            })
     }
 
     update()
     {
-
+        TWEEN.update()
     }
 }
