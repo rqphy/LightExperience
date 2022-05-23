@@ -17,7 +17,7 @@ export default class Light
         }
 
         this.setLight()
-        this.setHelper()
+        // this.setHelper()
     }
 
     setLight()
