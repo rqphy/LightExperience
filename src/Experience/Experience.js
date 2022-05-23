@@ -8,6 +8,7 @@ import Renderer from './Renderer'
 import sources from './sources'
 import World from './World/World'
 import MouseAnimation from './MouseAnimation'
+import CameraAnimation from './CameraAnimation'
 
 let instance = null
 
@@ -38,6 +39,7 @@ export default class Experience
         this.renderer = new Renderer()
         this.world = new World()
         this.mouseAnimation = new MouseAnimation()
+        this.cameraAnimation = new CameraAnimation()
 
         // Sizes resize event
         this.sizes.on('resize', () =>
