@@ -22,7 +22,7 @@ export default class Light
 
     setLight()
     {
-        this.light = new THREE.DirectionalLight('#ffffff', 0.7)
+        this.light = new THREE.DirectionalLight('#ffffff', 1.5)
         this.light.castShadow = true
         this.light.shadow.camera.far = 15
         this.light.shadow.mapSize.set(1024, 1024)
