@@ -18,7 +18,7 @@ export default class F1
     {
         this.model = this.resource.scene
         this.model.scale.set(0.7, 0.7, 0.7)
-        this.model.position.set(0, -0.5, 0)
+        this.model.position.set(-0.25, -0.5, 0)
         this.model.rotation.z = 0.05 * Math.PI
         this.model.rotation.y = 0.1 * Math.PI
         this.model.rotation.x = 0.05 * Math.PI

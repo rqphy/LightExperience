@@ -33,12 +33,12 @@ export default class CameraAnimation
         let coords = {}
         switch (view) {
             case 'side':
-                coords.x = -5.533833711541049
+                coords.x = -5.193833711541049
                 coords.y = 1.4644913989102093
                 coords.z = -3.1130141339266837
                 break
             case 'top':
-                coords.x = -1.6056395550286033
+                coords.x = -1.3556395550286033
                 coords.y = 7.690507651664971
                 coords.z = -1.5093090071262074
                 break
