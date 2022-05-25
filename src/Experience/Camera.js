@@ -18,7 +18,7 @@ export default class Camera
         }
 
         this.setInstance()
-        this.setOrbitControls()
+        // this.setOrbitControls()
     }
 
     setInstance()
@@ -85,6 +85,8 @@ export default class Camera
 
     update()
     {
-        this.controls.update()
+        // this.controls.update()
+        this.instance.lookAt(new THREE.Vector3(0, 0, 0))
+        // this.instance.rotation.set(0,0,0)
     }
 }
