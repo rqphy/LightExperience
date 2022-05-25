@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+:root
+{
+    --header-height: 40px;
+}
+
 html,
 body
 {
@@ -25,7 +30,7 @@ header
     position: absolute;
     top: 0;
     left: 0;
-    height: 40px;
+    height: var(--header-height);
     width: 100%;
     z-index: 5;
 }
@@ -35,15 +40,25 @@ header
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
 }
 
 .view
 {
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    width: calc(100% / 3);
+    height: 100%;
+    line-height: var(--header-height);
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
+    text-align: center;
+    transition: all .3s ease-in-out;
     color: #FFFFFF;
+}
+
+.view:hover {
+    background-color: #FFFFFF80;
 }
