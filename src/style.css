@@ -16,6 +16,11 @@ body
     overflow: hidden;
 }
 
+img
+{
+    width: 100%;
+}
+
 .webgl
 {
     position: fixed;
@@ -59,6 +64,94 @@ header
     color: #FFFFFF;
 }
 
-.view:hover {
+.view:hover
+{
     background-color: #FFFFFF80;
+}
+
+.loading
+{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000000;
+    z-index: 5;
+}
+
+.loading .logo
+{
+    --logo-size: 36px;
+    height: var(--logo-size);
+    width: var(--logo-size);
+    font-size: 32px;
+    animation: bounce .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite alternate;
+    animation-delay: .05s;
+    will-change: transform;
+}
+
+.loading .logo img
+{
+    height: 100%;
+    object-fit: contain;
+}
+
+.loading .letters_list
+{
+    margin-left: 10px;
+    font-family: Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.loading .letter
+{
+    display: inline-block;
+    text-transform: uppercase;
+    animation: bounce .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite alternate;
+}
+
+.loading .letter:nth-child(1)
+{
+    animation-delay: .10s;
+}
+
+.loading .letter:nth-child(2)
+{
+    animation-delay: .15s;
+}
+
+.loading .letter:nth-child(3)
+{
+    animation-delay: .20s;
+}
+
+.loading .letter:nth-child(4)
+{
+    animation-delay: .25s;
+}
+
+.loading .letter:nth-child(5)
+{
+    animation-delay: .30s;
+}
+
+.loading .letter:nth-child(6)
+{
+    animation-delay: .35s;
+}
+
+.loading .letter:nth-child(7)
+{
+    animation-delay: .40s;
+}
+
+@keyframes bounce
+{
+    0%{transform: translateY(0px);}
+    100% {transform: translateY(-1em);}
 }
