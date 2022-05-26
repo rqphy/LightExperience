@@ -78,6 +78,15 @@ export default class Resources extends EventEmitter
         if(this.loaded === this.toLoad)
         {
             this.trigger('ready')
+            const loadingScreen = document.querySelector('.loading')
+            if(loadingScreen)
+            {
+                loadingScreen.classList.add('ready')
+                setTimeout(() =>
+                {
+                    loadingScreen.classList.add('hide')
+                }, 1500)
+            }
         }
     }
 }
