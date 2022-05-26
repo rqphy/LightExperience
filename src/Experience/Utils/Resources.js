@@ -85,7 +85,7 @@ export default class Resources extends EventEmitter
                 setTimeout(() =>
                 {
                     loadingScreen.classList.add('hide')
-                }, 1500)
+                }, 1000)
             }
         }
     }
