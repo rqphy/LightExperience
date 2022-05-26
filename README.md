@@ -2,8 +2,7 @@
 
 A three.js experiment that shows how beautiful Formula One cars are.
 
-## LINKS
-Production: https://light-xp.netlify.app/
+[Live](https://light-xp.netlify.app/)
 
 ## INSTALL
 ```bash
