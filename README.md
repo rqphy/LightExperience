@@ -1,6 +1,9 @@
-# A simple Threejs boilerplate
+# Light Experience
 
-The easiest way to create your new projet.
+A three.js experiment that shows how beautiful Formula One cars are.
+
+## LINKS
+Production: https://light-xp.netlify.app/
 
 ## INSTALL
 ```bash
@@ -14,7 +17,7 @@ $ npm install
 $ npm run dev
 ```
 
-### BUILD
+### PRODUCTION
 ```bash
 $ npm run build
 ```
