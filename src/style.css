@@ -80,6 +80,18 @@ header
     overflow: hidden;
     background-color: #000000;
     z-index: 5;
+    will-change: opacity;
+    transition: opacity .6s ease-in-out;
+}
+
+.loading.ready
+{
+    opacity: 0;
+}
+
+.loading.hide
+{
+    display: none;
 }
 
 .loading .logo
