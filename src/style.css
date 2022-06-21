@@ -51,7 +51,6 @@ header
 
 .view
 {
-    /* margin-left: 20px; */
     width: calc(100% / 3);
     height: 100%;
     line-height: var(--header-height);
@@ -64,7 +63,7 @@ header
     color: #FFFFFF;
 }
 
-.view:hover
+.view:hover, .view.active
 {
     background-color: #FFFFFF80;
 }
