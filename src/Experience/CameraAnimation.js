@@ -30,6 +30,10 @@ export default class CameraAnimation
 
     handleViewClick(button)
     {
+        // Check if view is already active
+        if(button.classList.contains('active')) return
+
+        // update camera
         let coords = {}
         switch (button.dataset.view) {
             case 'side':
@@ -49,9 +53,10 @@ export default class CameraAnimation
                 coords.z = 8
                 break
         }
-
-        this.updateViewButtons(button)
         this.animateCamera(coords)
+
+        // update header
+        this.updateViewButtons(button)
     }
 
     updateViewButtons(button) 
