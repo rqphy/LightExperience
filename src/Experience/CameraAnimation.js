@@ -48,9 +48,9 @@ export default class CameraAnimation
                 break
         
             default:
-                coords.x = 0
-                coords.y = 0
-                coords.z = 8
+                coords.x = this.camera.defaultPos.x
+                coords.y = this.camera.defaultPos.y
+                coords.z = this.camera.defaultPos.z
                 break
         }
         this.animateCamera(coords)

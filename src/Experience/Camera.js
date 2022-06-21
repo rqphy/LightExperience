@@ -12,6 +12,9 @@ export default class Camera
         this.canvas = this.experience.canvas
         this.debug = this.experience.debug
 
+        // camera position
+        this.defaultPos = {x: 0, y: 0, z: 8}
+
         if(this.debug.active)
         {
             this.debugFolder = this.debug.ui.addFolder('Camera')
@@ -29,7 +32,11 @@ export default class Camera
             0.1,
             100
         )
-        this.instance.position.set(0, 0, 8)
+        this.instance.position.set(
+            this.defaultPos.x,
+            this.defaultPos.y,
+            this.defaultPos.z
+        )
         this.scene.add(this.instance)
 
         // Debug
