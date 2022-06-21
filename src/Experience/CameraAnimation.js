@@ -23,15 +23,15 @@ export default class CameraAnimation
         {
             btn.addEventListener('click', () =>
             {
-                this.handleViewClick(btn.dataset.view)
+                this.handleViewClick(btn)
             })
         }
     }
 
-    handleViewClick(view)
+    handleViewClick(button)
     {
         let coords = {}
-        switch (view) {
+        switch (button.dataset.view) {
             case 'side':
                 coords.x = -5.193833711541049
                 coords.y = 1.4644913989102093
@@ -50,7 +50,14 @@ export default class CameraAnimation
                 break
         }
 
+        this.updateViewButtons(button)
         this.animateCamera(coords)
+    }
+
+    updateViewButtons(button) 
+    {
+        document.querySelector('.view.active')?.classList.remove('active')
+        button.classList.add('active')
     }
 
     animateCamera(position)
