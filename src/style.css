@@ -1,3 +1,8 @@
+:root
+{
+    --cursor-size: 20px;
+    --cursor-hovered_size_coef: 3;
+}
 *
 {
     margin: 0;
@@ -14,6 +19,7 @@ html,
 body
 {
     overflow: hidden;
+    cursor: none;
 }
 
 img
@@ -28,6 +34,36 @@ img
     left: 0;
     outline: none;
 }
+
+
+
+#cursor
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--cursor-size);
+    width: var(--cursor-size);
+    background-color: #A6051A;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    will-change: height, width;
+    z-index: 8;
+    transition: height .4s ease-in-out, width .3s ease-in-out;
+}
+
+#cursor.active
+{
+    display: block;
+}
+
+#cursor.hovered {
+    height: calc(var(--cursor-size) * var(--cursor-hovered_size_coef));
+    width: calc(var(--cursor-size) * var(--cursor-hovered_size_coef));
+}
+
 
 header
 {
@@ -54,7 +90,7 @@ header
     width: calc(100% / 3);
     height: 100%;
     line-height: var(--header-height);
-    cursor: pointer;
+    cursor: none;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
@@ -78,7 +114,7 @@ header
     justify-content: center;
     overflow: hidden;
     background-color: #000000;
-    z-index: 5;
+    z-index: 20;
     will-change: opacity;
     transition: opacity .6s ease-in-out;
 }
