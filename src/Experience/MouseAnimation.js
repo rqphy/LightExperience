@@ -9,6 +9,9 @@ export default class MouseAnimation
         this.canvas = this.experience.canvas
         this.light = this.experience.world.light
 
+        this.cursor = document.querySelector('#cursor')
+        this.hoverElements = document.querySelectorAll('[data-hover_element]')
+
         this.lightPosition = {}
         this.lightPosition.x = 0
         this.lightPosition.y = 0
@@ -22,7 +25,8 @@ export default class MouseAnimation
         this.mousePosition.x = 0
         this.mousePosition.y = 0
 
-        this.canvas.addEventListener('mousemove', this.getMousePosition)
+        window.addEventListener('mousemove', this.getMousePosition)
+        this.initCursorAnimation()
     }
 
     getMousePosition = (_event) =>
@@ -33,6 +37,11 @@ export default class MouseAnimation
         this.mousePosition.y = _event.clientY
         
     }
+
+    updateCursorPosition = () =>
+    {
+        this.cursor.style.transform = `translate3d(calc(${this.mousePosition.x}px - 50%),calc(${this.mousePosition.y}px - 50%), 0)`
+    }
     
     updateLightPosition(_x, _y, _z)
     {
@@ -41,6 +50,25 @@ export default class MouseAnimation
             _y,
             _z
         )
+    }
+
+    initCursorAnimation = () =>
+    {
+        this.cursor.classList.add('active')
+    
+        // HOVER
+        if(this.hoverElements.length < 1) return
+        for(const element of this.hoverElements)
+        {
+            element.addEventListener('mouseover', () =>
+            {
+                this.cursor.classList.add('hovered')
+            })
+            element.addEventListener('mouseleave', () =>
+            {
+                this.cursor.classList.remove('hovered')
+            })
+        }
     }
     
     update()
@@ -54,5 +82,6 @@ export default class MouseAnimation
             this.lightPosition.y,
             this.lightPosition.z
         )
+        this.updateCursorPosition()
     }
 }
