@@ -73,10 +73,17 @@ export default class MouseAnimation
     
     update()
     {
-        this.lightPosition.x = ((this.mousePosition.x * (Math.abs(this.limits.x.max)+Math.abs(this.limits.x.min))) / window.innerWidth) - Math.abs(this.limits.x.min)
-        this.lightPosition.y = ((this.mousePosition.y * (Math.abs(this.limits.y.max)+Math.abs(this.limits.y.min))) / window.innerHeight) - Math.abs(this.limits.y.min)
+        const mouseCanvasPosition = {
+            x: ((this.mousePosition.x * (Math.abs(this.limits.x.max)+Math.abs(this.limits.x.min))) / window.innerWidth) - Math.abs(this.limits.x.min),
+            y: ((this.mousePosition.y * (Math.abs(this.limits.y.max)+Math.abs(this.limits.y.min))) / window.innerHeight) - Math.abs(this.limits.y.min)
+        }
+
+        this.lightPosition.x += (mouseCanvasPosition.x - this.lightPosition.x) / 20
+        this.lightPosition.y += (mouseCanvasPosition.y - this.lightPosition.y) / 20
+
         this.lightPosition.x = Math.min(Math.max(this.lightPosition.x , this.limits.x.min), this.limits.x.max)
         this.lightPosition.y = Math.min(Math.max(this.lightPosition.y , this.limits.y.min), this.limits.y.max)
+
         this.updateLightPosition(
             - this.lightPosition.x,
             this.lightPosition.y,
