@@ -22,7 +22,7 @@ I added some camera animations. It was a first. I’ve seen some of them on diff
 
 ### Performances
 
-As you can see the website is slow. I didn’t find a way to reduce the 3d model weight. I implemented a loader to counter the long wait. It’s not an optimal solution, maybe I’ll come back in the future to patch this.
+As you can see the website is slow. I didn’t find a way to reduce the 3d model weight. I implemented a loader to counter the long wait. It’s not an optimal solution, maybe I’ll come back in the future to patch this. To counter that, I’ve setup a loading screen.
 
 ## License
 
