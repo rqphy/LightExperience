@@ -4,7 +4,7 @@
 
 I’ve seen an amazing website on Twitter: this. I want to create a lookalike light and shadow effect. I don’t do any 3d modeling, so I need to find a model on the web.
 
-I love Formula 1 and I want to show you how beautiful a F1 car looks. Let’s show you the 2022 Ferrari car. The model was made by Machin.
+I love Formula 1 and I want to show you how beautiful a F1 car looks. Let’s show you the 2022 Ferrari car.
 
 [Live](https://light-xp.netlify.app/)
 
@@ -23,3 +23,7 @@ I added some camera animations. It was a first. I’ve seen some of them on diff
 ### Performances
 
 As you can see the website is slow. I didn’t find a way to reduce the 3d model weight. I implemented a loader to counter the long wait. It’s not an optimal solution, maybe I’ll come back in the future to patch this.
+
+## License
+
+[Model](https://github.com/rqphy/LightExperience/blob/main/static/models/F1/license.txt)
